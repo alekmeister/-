@@ -9,5 +9,7 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="hero_admin_panel_template" />
+    <orderEntry type="module" module-name="project 2" />
   </component>
 </module>

@@ -1,0 +1,31 @@
+$ligth-grey: #F1EADC;
+$white: #FFFFFF;
+$grey-blue: #6E9C9F;
+$black: #000000;
+
+.header {
+  height: 100%;
+  width: 100%;
+  &_inner {
+  margin-left: 230px;
+    margin-top: 55px;
+}
+  &_navigation {
+    display: flex;
+  }
+}
+
+.logo{
+  color: $black;
+  font-weight: 500;
+  font-size: 16px;
+
+  &_icon {
+    height: 40px;
+    width: 50px;
+  }
+  &_svg {
+    width: 100%;
+    height: 100%;
+  }
+}
