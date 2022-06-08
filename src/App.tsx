@@ -1,15 +1,13 @@
 import React from 'react';
-import 'App.scss';
-import Main from "Main";
+import './App.scss';
+import Main from 'Main';
 
 function App() {
   return (
-
     <div className="App">
-        <Main/>
-      <div className='container'>
-        </div>
-      </div>
+      <Main />
+      <div className="container" />
+    </div>
   );
 }
 
