@@ -9,6 +9,10 @@ import Header1 from './assets/Header1.jpg';
 import Header2 from './assets/Header2.jpg';
 import Header3 from './assets/Header3.jpg';
 import sweetshot from './assets/sweetshot.jpg';
+import gear from './assets/main.service/gear.svg';
+import hand from './assets/main.service/hand.svg';
+import quality from './assets/main.service/quality.svg';
+import sliderDown from './assets/main.service/sliderDown.jpg';
 
 function Main() {
   return (
@@ -66,7 +70,10 @@ function Main() {
                   <img src={tShirt} alt={tShirt} />
                 </div>
                 <div className={style.section_items_item_title}> Футболка USA </div>
-                <div className={style.section_items_item_price}> $229 </div>
+                <div className={style.section_items_item_prices}>
+                  <div className={style.section_items_item_price}>$229</div>
+                  <div className={style.section_items_item_newPrice}>$129 </div>
+                </div>
               </div>
               <div className={style.section_items_item}>
                 <div className={style.section_items_item_img}>
@@ -86,6 +93,82 @@ function Main() {
           </div>
           <button className={style.btn_2}>Открыть магазин</button>
         </section>
+        <section>
+          <div className={style.important}>
+            <div className={style.important_title}> Что для нас важно </div>
+            <div className={style.important_service}>
+              <div className={style.important_item}>
+                <div className={style.important_item_img}>
+                  <img src={quality} alt={quality} />
+                </div>
+                <div className={style.important_item_title}> Качество</div>
+                <div className={style.important_item_text}> Наши профессионалы работают на лучшем оборудовании для пошива одежды беспрецедентного качества </div>
+              </div>
+              <div className={style.important_item}>
+                <div className={style.important_item_img}>
+                  <img src={gear} alt={gear} />
+                </div>
+                <div className={style.important_item_title}> Скорость</div>
+                <div className={style.important_item_text}> Благодаря отлаженной системе в Womazing мы можем отшивать до 20-ти единиц продукции в наших собственных цехах </div>
+              </div>
+              <div className={style.important_item}>
+                <div className={style.important_item_img}>
+                  <img src={hand} alt={hand} />
+                </div>
+                <div className={style.important_item_title}> Ответственность</div>
+                <div className={style.important_item_text}> Мы заботимся о людях и планете. Безотходное производство и комфортные условия труда - все это Womazing </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section>
+          <div className={style.dreamTeam}>
+            <div className={style.dreamTeam_title}>Команда мечты Womazing</div>
+            <div className={style.dreamTeam_inner}>
+              <div className={style.dreamTeam_img}>
+                <img src={sliderDown} alt={sliderDown} />
+              </div>
+              <div className={style.description}>
+                <div className={style.description_title}>Для каждой</div>
+                <div className={style.description_text}>
+                  Каждая девушка уникальна. Однако, мы схожи в миллионе мелочей.
+                  <p>Womazing ищет эти мелочи и создает прекрасные вещи, которые выгодно подчеркивают достоинства каждой девушки.</p>
+                </div>
+                <a className={style.description_more} href="/">
+                  Подробнее о бренде{' '}
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <footer className={style.footer}>
+          <div className={style.header_navigation}>
+            <div className={style.header_left}>
+              <Logo className={style.logo_icon} />
+              <div className={style.logo}>WOMAZING</div>
+            </div>
+            <nav className={style.nav}>
+              <a className={style.nav_link} href="/">
+                Главная
+              </a>
+              <a className={style.nav_link} href="/">
+                Магазин
+              </a>
+              <a className={style.nav_link} href="/">
+                О бренде
+              </a>
+              <a className={style.nav_link} href="/">
+                Контакты
+              </a>
+            </nav>
+            <div className={style.phone}>
+              <div className={style.phone_number} />+ 7(495) 823 - 54 - 12
+            </div>
+          </div>
+          <a className={style.email} href="mailto:hello@womazing.com">
+            hello@womazing.com
+          </a>
+        </footer>
       </div>
     </main>
   );
