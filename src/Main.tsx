@@ -13,6 +13,10 @@ import gear from './assets/main.service/gear.svg';
 import hand from './assets/main.service/hand.svg';
 import quality from './assets/main.service/quality.svg';
 import sliderDown from './assets/main.service/sliderDown.jpg';
+import facebook from './assets/footer/facebook.svg';
+import instagram from './assets/footer/instagram.svg';
+import twitter from './assets/footer/twitter.svg';
+import cards from './assets/footer/cards.jpg';
 
 function Main() {
   return (
@@ -45,22 +49,28 @@ function Main() {
             <Basket className={style.basket} />
           </div>
         </header>
-        <section className={style.section}>
-          <div className={style.section_inner}>
-            <div className={style.section_left}>
-              <div className={style.section_left_title}>Новые поступления в этом сезоне</div>
-              <div className={style.section_left_subtitle}>Утонченные сочетания и бархатные оттенки - вот то, что вы искали в этом сезоне. Время исследовать.</div>
-              <div className={style.section_left_btn}>
-                <button className={style.btn}>Открыть магазин</button>
-              </div>
+      </div>
+      <section className={style.section}>
+        <div className={style.section_inner}>
+          <div className={style.section_left}>
+            <div className={style.section_left_title}>Новые поступления в этом сезоне</div>
+            <div className={style.section_left_subtitle}>Утонченные сочетания и бархатные оттенки - вот то, что вы искали в этом сезоне. Время исследовать.</div>
+            <div className={style.section_left_btn}>
+              <button className={style.btn}>Открыть магазин</button>
             </div>
-            <div className={style.section_right}>
+          </div>
+
+          <div className={style.section_right}>
+            <div className={style.section_right_inner}>
               <img className={style.section_right_header2} src={Header2} alt="header2" />
               <img className={style.section_right_header1} src={Header1} alt="header1" />
               <img className={style.section_right_header3} src={Header3} alt="header3" />
             </div>
           </div>
-        </section>
+        </div>
+      </section>
+
+      <div className={style.container}>
         <section className={style.section}>
           <div className={style.section_in}>
             <div className={style.section_title}> Новая коллекция </div>
@@ -141,35 +151,60 @@ function Main() {
             </div>
           </div>
         </section>
-        <footer className={style.footer}>
-          <div className={style.header_navigation}>
-            <div className={style.header_left}>
-              <Logo className={style.logo_icon} />
-              <div className={style.logo}>WOMAZING</div>
+      </div>
+      <footer className={style.footer}>
+        <div className={style.container}>
+          <div className={style.footer_inner}>
+            <div className={style.header_navigation}>
+              <div className={style.header_left}>
+                <Logo className={style.logo_icon} />
+                <div className={style.logo}>WOMAZING</div>
+              </div>
+              <nav className={style.nav}>
+                <a className={style.nav_link} href="/">
+                  Главная
+                </a>
+                <a className={style.nav_link} href="/">
+                  Магазин
+                </a>
+                <a className={style.nav_link} href="/">
+                  О бренде
+                </a>
+                <a className={style.nav_link} href="/">
+                  Контакты
+                </a>
+              </nav>
+              <div className={style.phone}>
+                <div className={style.phone_number} />+ 7(495) 823 - 54 - 12
+              </div>
             </div>
-            <nav className={style.nav}>
-              <a className={style.nav_link} href="/">
-                Главная
-              </a>
-              <a className={style.nav_link} href="/">
-                Магазин
-              </a>
-              <a className={style.nav_link} href="/">
-                О бренде
-              </a>
-              <a className={style.nav_link} href="/">
-                Контакты
-              </a>
-            </nav>
-            <div className={style.phone}>
-              <div className={style.phone_number} />+ 7(495) 823 - 54 - 12
+
+            <div className={style.bottom}>
+              <div className={style.rights}>
+                © Все права защищены
+                <a className={style.confidentiality} href="/">
+                  Политика конфиденциальности
+                </a>
+                <a className={style.offer} href="/">
+                  Публичная оферта
+                </a>
+              </div>
+
+              <div className={style.rightBlock}>
+                <a className={style.email} href="mailto:hello@womazing.com">
+                  hello@womazing.com
+                </a>
+                <div className={style.social}>
+                  <img className={style.social_instagram} src={instagram} alt={instagram} />
+                  <img className={style.social_facebook} src={twitter} alt={facebook} />
+                  <img className={style.social_twitter} src={facebook} alt={twitter} />
+                </div>
+                <img className={style.cards} src={cards} alt="cards" />
+              </div>
             </div>
           </div>
-          <a className={style.email} href="mailto:hello@womazing.com">
-            hello@womazing.com
-          </a>
-        </footer>
-      </div>
+        </div>
+      </footer>
     </main>
   );
 }

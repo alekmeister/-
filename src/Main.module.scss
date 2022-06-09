@@ -30,6 +30,30 @@ $price :#998E78;
   }
 }
 
+%ref {
+    position: relative;
+    color: $black;
+    cursor: pointer;
+    line-height: 1;
+    text-decoration: none;
+
+  &:after {
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: $black;
+    content: "";
+    transition: width 0.3s ease-out;
+  }
+  &:hover:after,
+  &:focus:after {
+    width: 100%;
+  }
+  }
+
+
 .container {
   width: 100%;
   max-width: 1140px;
@@ -39,6 +63,7 @@ $price :#998E78;
 
 
 .header {
+  position: absolute;
   height: 100%;
   width: 100%;
   &_inner {
@@ -87,20 +112,26 @@ $price :#998E78;
     margin-left: 15px ;
   }
 }
-
+.basket {
+  margin-right: 420px;
+}
 
 .section {
   &_inner {
-
     display: flex;
   }
   &_right {
-width: 55%;
+width: 46%;
 background-color: $ligth-grey;
+    &_inner {
+      padding-top: 100px;
+      position: relative;
+
+    }
     &_header1{
       position: absolute;
-      right: 620px;
-      bottom: -100px;
+      right: 550px;
+      bottom: -20px;
     }
     &_header2{
       position: relative;
@@ -110,17 +141,18 @@ background-color: $ligth-grey;
     }
     &_header3{
       position: absolute;
-      right: 170px;
+      right: 100px;
       top: 250px
 
     }
 
   }
   &_left {
+    padding-left: 245px;
     display: flex;
     flex-direction: column;
     margin-top:190px;
-    width: 45%;
+    width: 63%;
     &_title {
       font-weight: 500;
       font-size: 55px;
@@ -264,4 +296,73 @@ background-color: $ligth-grey;
     color: $grey-blue;
     text-decoration: none;
   }
+}
+.footer {
+  margin-top: 100px;
+  background-color: $ligth-grey;
+  &_inner {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+
+}
+.rights {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.confidentiality {
+  @extend %ref;
+  margin-top: 6px;
+}
+.offer {
+  margin-top: 6px;
+  @extend %ref;
+}
+.categories {
+  font-size: 13px;
+  display: flex;
+  flex-direction: column;
+}
+.category{
+  margin-bottom: 10px;
+}
+.rightBlock {
+ display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+}
+.email {
+  @extend %ref
+}
+
+.social {
+  margin-top: 30px;
+  margin-bottom: 30px;
+&_instagram {
+  margin-right: 12px;
+}
+&_facebook {
+  margin-right: 12px;
+}
+
+}
+.nav {
+  &_link{
+    color: $black;
+    text-decoration: $white;
+    margin-left: 20px;
+    margin-right: 20px;
+
+    &:hover {
+      color: $grey-blue;
+    }
+  }
+
 }
