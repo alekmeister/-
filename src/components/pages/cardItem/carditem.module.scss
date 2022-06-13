@@ -1,0 +1,78 @@
+@import '../../../style/variables';
+@import '../../../style/btn';
+@import '../../../style/general';
+
+
+.title {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.item {
+  display: flex;
+}
+
+.options {
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 70px;
+}
+.price {
+  color: $price;
+  font-size: 40px;
+  margin-bottom: 60px;
+}
+
+.size {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.oneSize {
+  @extend %btn_black_white;
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+  margin-bottom: 50px;
+}
+
+.colors{
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.oneColor{
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  background-color: #9F0013;
+  margin-right: 10px;
+  border-width: 0;
+  &:hover {
+    border-color: $black;
+    border-width: 1px;
+  }
+}
+
+.inBasket {
+  margin-top: 50px;
+}
+
+.amount {
+  width: 70px;
+  height: 70px;
+  border: 2px solid $grey-blue;
+  margin-right: 10px;
+  font-size: 20px;
+  text-align: center
+}
+
+.btn {
+  @extend %btn;
+}
+
+.connectedItems {
+  margin-top: 130px;
+  margin-bottom: 70px;
+  font-size: 40px;
+}

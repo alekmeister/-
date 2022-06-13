@@ -1,0 +1,22 @@
+%ref {
+  position: relative;
+  color: $black;
+  cursor: pointer;
+  line-height: 1;
+  text-decoration: none;
+
+  &:after {
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: $black;
+    content: "";
+    transition: width 0.3s ease-out;
+  }
+  &:hover:after,
+  &:focus:after {
+    width: 100%;
+  }
+}

@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/../../../../vsc/hero_admin_panel_template/.idea/hero_admin_panel_template.iml" filepath="$PROJECT_DIR$/../../../../vsc/hero_admin_panel_template/.idea/hero_admin_panel_template.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../../../vsc/marvel_starter/.idea/marvel_starter.iml" filepath="$PROJECT_DIR$/../../../../vsc/marvel_starter/.idea/marvel_starter.iml" />
       <module fileurl="file://$PROJECT_DIR$/../../../../vsc/project 2/.idea/project 2.iml" filepath="$PROJECT_DIR$/../../../../vsc/project 2/.idea/project 2.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/tretyakovka.iml" filepath="$PROJECT_DIR$/.idea/tretyakovka.iml" />
     </modules>

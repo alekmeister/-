@@ -1,0 +1,60 @@
+@import '/src/style/variables';
+@import '/src/style/ref';
+@import '/src/style/general';
+
+.footer {
+  margin-top: 100px;
+  background-color: $ligth-grey;
+  &_inner {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+
+}
+.rights {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.confidentiality {
+  @extend %ref;
+  margin-top: 6px;
+}
+.offer {
+  margin-top: 6px;
+  @extend %ref;
+}
+.categories {
+  font-size: 13px;
+  display: flex;
+  flex-direction: column;
+}
+.category{
+  margin-bottom: 10px;
+}
+.rightBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+}
+.email {
+  @extend %ref
+}
+
+.social {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  &_instagram {
+    margin-right: 12px;
+  }
+  &_facebook {
+    margin-right: 12px;
+  }
+
+}

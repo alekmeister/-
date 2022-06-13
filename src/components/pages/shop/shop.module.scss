@@ -1,0 +1,38 @@
+@import '../../../style/variables';
+@import '../../../style/btn';
+@import '../../../style/general';
+
+
+.title {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+.categories {
+display: flex;
+  justify-content: space-between;
+  margin-bottom: 60px;
+  &_btn {
+    @extend %btn_black_white;
+  }
+}
+.displayed {
+  font-size: 17px;
+  margin-top: 50px;
+  margin-bottom: 30px;
+  color: $price;
+}
+
+.pages {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  &_btn {
+    @extend %btn_black_white;
+    padding: 8px;
+    width: 40px;
+    height: 40px;
+    border: 1.5px solid;
+
+  }
+}

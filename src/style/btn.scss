@@ -1,0 +1,39 @@
+@import "variables";
+
+%btn {
+  font-weight: 400;
+  font-size: 17px;
+  color:  $white;
+  background-color: $grey-blue;
+  border: $grey-blue 2px solid;
+  padding: 22px 50px;
+  width: 240px;
+  height: 70px;
+  text-decoration: none;
+  transition: background 0.1s linear, color 0.1s linear;
+  &:hover {
+    background-color: $black;
+    border: $black 2px solid;
+  }
+}
+
+%btn_2 {
+  @extend %btn;
+  background-color: $white;
+  color: $grey-blue;
+  &:hover {
+    color: $white
+  }
+}
+
+%btn_black_white {
+    @extend %btn;
+    background-color: $white;
+    color: $black;
+    margin-right: 10px;
+    border-color: $black;
+    &:hover {
+      background-color: $black;
+      color: $white;
+    }
+}

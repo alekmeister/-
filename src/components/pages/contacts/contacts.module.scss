@@ -1,0 +1,75 @@
+@import '../../../style/variables';
+@import '../../../style/btn';
+@import '../../../style/general';
+
+.title {
+  margin-top: 150px;
+  margin-bottom: 200px;
+}
+
+.map {
+  height: 450px;
+  background-color: $ligth-grey;
+  margin-bottom: 100px;
+}
+
+.connectionWithUs {
+  display: flex;
+  margin-bottom: 100px;
+}
+
+.item {
+  margin-right: 100px;
+  &_phoneNumber {
+    font-size: 20px;
+    margin-top: 15px;
+  }
+  &_email{
+    margin-top: 15px;
+    font-size: 20px;
+  }
+  &_street {
+    margin-top: 15px;
+    font-size: 20px;
+  }
+}
+
+.writeUs{
+  font-size: 25px;
+  display: flex;
+  flex-direction: column;
+
+  &_input {
+    font-size: 17px;
+    padding-bottom: 15px;
+    outline: none;
+    color: $grey;
+    width: 350px;
+    margin-top: 15px;
+    border-width: 0 0 1px 0;
+    border-color: black;
+
+    &:last-child {
+      padding-bottom: 100px;
+
+    }
+    &:first-child{
+      margin-top: 30px;
+    }
+
+  }
+}
+
+.btn{
+  @extend %btn;
+  width: 200px;
+  margin-top: 20px;
+}
+
+.success{
+  margin-top: 20px;
+  width: 400px;
+  height: 80px;
+  padding:30px 70px;
+  background-color: $ligth-grey
+}
