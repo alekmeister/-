@@ -1,0 +1,19 @@
+@import "src/style/input";
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  padding-right: 150px;
+}
+
+.title {
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 140%;
+  margin-bottom: 30px;
+}
+
+.input {
+  @extend %input;
+}

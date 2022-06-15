@@ -1,0 +1,28 @@
+.items {
+  margin-top: 20px;
+  margin-bottom: 70px;
+  display: flex;
+  height: 300px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.titleAndPhoto {
+  display: flex;
+  align-items: center;
+}
+
+.item{
+  margin: 0 30px;
+  height: 200px;
+}
+.amount{
+
+}
+
+.price{
+  margin-right: 50px;
+}
+.totalPrice{
+  margin-right: 60px;
+}

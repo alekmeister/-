@@ -1,6 +1,7 @@
 import { Header } from 'components/header/Header';
 import { Footer } from 'components/footer/Footer';
 import React, { FC } from 'react';
+import { Title } from 'components/title/Title';
 import style from './contacts.module.scss';
 
 const Contacts: FC = () => {
@@ -8,7 +9,7 @@ const Contacts: FC = () => {
     <>
       <Header />
       <div className={style.container}>
-        <div className={style.title}> Контакты</div>
+        <Title>Контакты</Title>
         <div className={style.map} />
         <div className={style.connectionWithUs}>
           <div className={style.item}>

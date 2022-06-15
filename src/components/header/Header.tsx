@@ -4,7 +4,7 @@ import { ReactComponent as Basket } from 'assets/basket.svg';
 import React from 'react';
 import style from 'components/header/header.module.scss';
 
-function Header() {
+const Header = () => {
   return (
     <header className={style.header}>
       <div className={style.container}>
@@ -36,6 +36,6 @@ function Header() {
       </div>
     </header>
   );
-}
+};
 
 export { Header };

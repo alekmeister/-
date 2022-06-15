@@ -2,14 +2,16 @@ import { Header } from 'components/header/Header';
 import { Footer } from 'components/footer/Footer';
 import sweetshot from 'assets/sweetshot.jpg';
 import { Clothres } from 'components/clothres/Clothres';
+import { Title } from 'components/title/Title';
+import React from 'react';
 import style from './carditem.module.scss';
 
-function CardItem() {
+const CardItem: React.FC = () => {
   return (
     <>
       <Header />
       <div className={style.container}>
-        <div className={style.title}>Свитшот Sweet Shot</div>
+        <Title>Свитшот Sweet Shot </Title>
         <div className={style.item}>
           <img className={style.photo} src={sweetshot} alt={sweetshot} />
           <div className={style.options}>
@@ -36,6 +38,6 @@ function CardItem() {
       <Footer />
     </>
   );
-}
+};
 
 export { CardItem };

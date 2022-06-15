@@ -4,7 +4,7 @@ import sweetshot from 'assets/sweetshot.jpg';
 import React from 'react';
 import style from 'components/clothres/clothres.module.scss';
 
-function Clothres() {
+const Clothres = () => {
   return (
     <div className={style.items}>
       <div className={style.items_item}>
@@ -33,6 +33,6 @@ function Clothres() {
       </div>
     </div>
   );
-}
+};
 
 export { Clothres };

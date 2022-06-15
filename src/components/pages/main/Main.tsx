@@ -11,8 +11,9 @@ import hand from 'assets/main.service/hand.svg';
 import quality from 'assets/main.service/quality.svg';
 import sliderDown from 'assets/main.service/sliderDown.jpg';
 import arrow from 'assets/arrow.svg';
+import { Title } from 'components/title/Title';
 
-function Main() {
+const Main = () => {
   return (
     <main>
       <div className={style.container}>
@@ -22,7 +23,7 @@ function Main() {
         <div className={style.slider}>
           <div className={style.slider_inner}>
             <div className={style.slider_left}>
-              <div className={style.title}>Новые поступления в этом сезоне</div>
+              <Title>Новые поступления в этом сезоне</Title>
 
               <div className={style.slider_left_subtitle}>Утонченные сочетания и бархатные оттенки - вот то, что вы искали в этом сезоне. Время исследовать.</div>
               <div className={style.slider_left_btn}>
@@ -103,6 +104,6 @@ function Main() {
       <Footer />
     </main>
   );
-}
+};
 
 export default Main;

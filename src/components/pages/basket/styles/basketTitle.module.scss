@@ -1,0 +1,18 @@
+@import '../../../../style/variables';
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  border-bottom: 1px solid $ligth-grey;
+  font-size: 20px;
+}
+
+.item {
+&:first-child {
+  margin-right: 290px;
+}
+  &:last-child {
+    margin-right: 50px;
+  }
+}
