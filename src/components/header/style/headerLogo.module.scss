@@ -1,0 +1,16 @@
+@import '/src/style/variables';
+
+.headerLogo {
+  display: flex;
+
+}
+.icon {
+  height: 25px;
+}
+.logo{
+  color: $black;
+  font-weight: 500;
+  font-size: 16px;
+  margin-left: 15px;
+  text-decoration: none;
+}

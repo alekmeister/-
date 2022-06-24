@@ -1,0 +1,29 @@
+.inner {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 60px;
+  margin-right: auto;
+}
+
+.title {
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 140%;
+  margin-bottom: 30px;
+}
+
+.subtitleAll {
+  font-size: 20px;
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.items {
+  display: flex;
+  font-weight: 500;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}

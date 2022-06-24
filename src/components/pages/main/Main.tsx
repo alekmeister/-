@@ -1,7 +1,4 @@
 import React from 'react';
-import { Header } from 'components/header/Header';
-import { Clothres } from 'components/clothres/Clothres';
-import { Footer } from 'components/footer/Footer';
 import style from 'components/pages/main/Main.module.scss';
 import Header1 from 'assets/Header1.jpg';
 import Header2 from 'assets/Header2.jpg';
@@ -12,19 +9,16 @@ import quality from 'assets/main.service/quality.svg';
 import sliderDown from 'assets/main.service/sliderDown.jpg';
 import arrow from 'assets/arrow.svg';
 import { Title } from 'components/title/Title';
+import { Clothes } from 'components/clothres/Clothes';
 
 const Main = () => {
   return (
-    <main>
-      <div className={style.container}>
-        <Header />
-      </div>
+    <>
       <section className={style.section}>
         <div className={style.slider}>
           <div className={style.slider_inner}>
             <div className={style.slider_left}>
               <Title>Новые поступления в этом сезоне</Title>
-
               <div className={style.slider_left_subtitle}>Утонченные сочетания и бархатные оттенки - вот то, что вы искали в этом сезоне. Время исследовать.</div>
               <div className={style.slider_left_btn}>
                 <div className={style.arrow}>
@@ -43,12 +37,10 @@ const Main = () => {
           </div>
         </div>
       </section>
-
       <div className={style.container}>
         <section className={style.section}>
           <div className={style.section_in}>
             <div className={style.title}> Новая коллекция </div>
-            <Clothres />
           </div>
         </section>
         <button className={style.btn_2}>Открыть магазин</button>
@@ -101,8 +93,7 @@ const Main = () => {
           </div>
         </section>
       </div>
-      <Footer />
-    </main>
+    </>
   );
 };
 

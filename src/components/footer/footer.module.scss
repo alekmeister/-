@@ -10,7 +10,12 @@
     padding-bottom: 50px;
   }
 }
-
+.header {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+}
 .bottom {
   display: flex;
   justify-content: space-between;

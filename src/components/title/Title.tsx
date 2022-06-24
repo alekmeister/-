@@ -1,10 +1,10 @@
 import React from 'react';
 import style from './title.module.scss';
 
-type TitleProps = {
-  children: string;
+type Props = {
+  children: React.ReactNode;
 };
 
-export const Title = (props: TitleProps) => {
-  return <div className={style.title}>{props.children}</div>;
+export const Title: React.FC<Props> = ({ children }) => {
+  return <div className={style.title}>{children}</div>;
 };

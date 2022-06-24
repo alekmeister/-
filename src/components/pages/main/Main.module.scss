@@ -3,6 +3,11 @@
 @import '../../../style/ref';
 @import '../../../style/general';
 
+.title {
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 110%;
+}
 
 .slider {
   &_inner {

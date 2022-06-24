@@ -1,0 +1,37 @@
+@import "../../../../../style/btn";
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 60px;
+  margin-right: auto;
+}
+
+.title {
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 140%;
+  margin-bottom: 30px;
+
+}
+.paymentMethods{
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 50px;
+}
+.paymentMethod {
+  height: 20px;
+  width: 20px;
+  border-radius: 0;
+  margin-right: 10px;
+
+
+
+}
+.btn{
+  @extend %btn;
+  width: 246px;
+  height: 68px;
+}
+

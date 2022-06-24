@@ -35,6 +35,11 @@
     "rules": {
         "require-jsdoc": "off",
         "@typescript-eslint-/ban-ts-comment": "off",
+        "no-shadow": "off",
+        "no-param-reassign": ["error", { "props": false }],
+        "@typescript-eslint/no-shadow": ["error" , { "ignoreTypeValueShadow": true }],
+        "no-unused-vars": "off",
+        "@typescript-eslint/no-unused-vars": "error",
         "@typescript-eslint-/ban-types": "off",
         "react/jsx-filename-extension": [1, { "extensions": [".ts", ".tsx"] }],
         "import/prefer-default-export": "off",

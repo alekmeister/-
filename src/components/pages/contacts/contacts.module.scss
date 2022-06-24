@@ -2,10 +2,6 @@
 @import '../../../style/btn';
 @import '../../../style/general';
 
-.title {
-  margin-top: 150px;
-  margin-bottom: 200px;
-}
 
 .map {
   height: 450px;
@@ -72,5 +68,5 @@
   height: 80px;
   padding:30px 70px;
   background-color: $ligth-grey;
-  opacity: 0
+  display: none;
 }

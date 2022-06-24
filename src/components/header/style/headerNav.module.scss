@@ -1,0 +1,19 @@
+@import '/src/style/variables';
+
+.navigation {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 140px;
+}
+
+.nav {
+  &_link{
+    text-decoration: $white;
+    margin-left: 20px;
+    margin-right: 20px;
+    &:hover {
+      color: $grey-blue;
+    }
+  }
+}

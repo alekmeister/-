@@ -1,0 +1,21 @@
+@import '../../../style/variables';
+@import '../../../style/general';
+
+.header {
+  height: 100%;
+  width: 100%;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+.phone{
+  display: flex;
+  width: 350px;
+}
+.basket {
+  margin-left: 80px;
+  display: block;
+
+}
+

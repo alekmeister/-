@@ -1,0 +1,12 @@
+@import '../../../../../style/general';
+@import "../../../../../style/btn";
+
+.checkout {
+  @extend %btn;
+}
+
+.total {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 80px;
+}
