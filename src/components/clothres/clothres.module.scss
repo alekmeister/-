@@ -34,14 +34,17 @@
         font-size: 15px;
 
         margin-right: 15px;
-        text-decoration: line-through;
+
       }
       &_newPrice {
-        color: $price;
-        font-size: 15px;
+        color: red;
+        font-size: 17px;
       }
     }
   }
+.discount{
+  text-decoration: line-through;
+}
 
 .newCollection {
   width: 100%;

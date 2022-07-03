@@ -8,6 +8,8 @@ import { Header } from 'components/header/Header';
 import { Footer } from 'components/footer/Footer';
 import { Error } from 'components/pages/error';
 import { CardItem } from 'components/pages/cardItem/CardItem';
+import { Basket } from 'components/pages/basket/components/main/Basket';
+import { Ordering } from 'components/pages/ordering/components/main/Ordering';
 
 const App = () => {
   return (
@@ -20,6 +22,8 @@ const App = () => {
           <Route path="*" element={<Error />} />
           <Route path="contact" element={<Contacts />} />
           <Route path="store/:clotheId" element={<CardItem />} />
+          <Route path="basket" element={<Basket />} />
+          <Route path="ordering" element={<Ordering />} />
           <Route path="*" element={<Error />} />
         </Routes>
       </main>

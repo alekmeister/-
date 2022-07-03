@@ -5,11 +5,14 @@ export interface Clothes {
   color: string[];
   id: string;
   name: string;
-  price: string;
+  price: number;
+  newPrice?: number;
   size: string[];
+  amount: number;
 }
 
 export interface State {
   items: Clothes[];
+  basket: Clothes[];
   status: REQUEST_STATUS;
 }

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import style from 'components/pages/main/Main.module.scss';
 import Header1 from 'assets/Header1.jpg';
 import Header2 from 'assets/Header2.jpg';
@@ -10,8 +10,18 @@ import sliderDown from 'assets/main.service/sliderDown.jpg';
 import arrow from 'assets/arrow.svg';
 import { Title } from 'components/title/Title';
 import { Clothes } from 'components/clothres/Clothes';
+import { useAppDispatch, useAppSelector } from 'components/store/types';
+import { getClothes } from 'components/store/clothes/actionCreators/getClothes';
+import { Link } from 'react-router-dom';
 
-const Main = () => {
+const Main: React.FC = () => {
+  const dispatch = useAppDispatch();
+
+  useEffect(() => {
+    dispatch(getClothes({ page: 1 }));
+  }, []);
+  const data = useAppSelector((state) => state.clothes.items);
+
   return (
     <>
       <section className={style.section}>
@@ -24,7 +34,9 @@ const Main = () => {
                 <div className={style.arrow}>
                   <img className={style.arrow_down} src={arrow} alt={arrow} />
                 </div>
-                <button className={style.btn}>Открыть магазин</button>
+                <Link to="store">
+                  <button className={style.btn}>Открыть магазин</button>
+                </Link>
               </div>
             </div>
             <div className={style.slider_right}>
@@ -41,9 +53,12 @@ const Main = () => {
         <section className={style.section}>
           <div className={style.section_in}>
             <div className={style.title}> Новая коллекция </div>
+            <Clothes items={data} />
           </div>
         </section>
-        <button className={style.btn_2}>Открыть магазин</button>
+        <Link to="store">
+          <button className={style.btn_2}>Открыть магазин</button>
+        </Link>
         <section>
           <div className={style.important}>
             <div className={style.important_title}> Что для нас важно </div>

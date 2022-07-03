@@ -3,6 +3,7 @@ import React from 'react';
 import type { Clothes as ClothesType } from 'components/store/clothes/types';
 import style from 'components/clothres/clothres.module.scss';
 import { Link } from 'react-router-dom';
+import cn from 'classnames';
 
 interface Props {
   items: ClothesType[];
@@ -20,9 +21,8 @@ export const Clothes: React.FC<Props> = ({ items }) => {
           </Link>
           <div className={style.items_item_title}> {el.name} </div>
           <div className={style.items_item_prices}>
-            <div className={style.items_item_price}>{el.price}</div>
-            <div className={style.items_item_newPrice}>$129</div>
-            {/* <button onClick={addClothes}>OK</button> */}
+            <div className={cn(style.items_item_price, { [style.discount]: el.newPrice })}>{el.price}$</div>
+            {el.newPrice ? <div className={style.items_item_newPrice}>{el.newPrice}$</div> : null}
           </div>
         </div>
       ))}

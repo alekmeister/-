@@ -5,7 +5,6 @@
 
 .map {
   height: 450px;
-  background-color: $ligth-grey;
   margin-bottom: 100px;
 }
 
@@ -68,5 +67,15 @@
   height: 80px;
   padding:30px 70px;
   background-color: $ligth-grey;
-  display: none;
+}
+
+.valid {
+  margin-top: 5px;
+  color: red;
+  font-size: 14px;
+}
+
+.disabled {
+  color: $grey-blue;
+  background-color: $white;
 }

@@ -6,20 +6,27 @@ import { v4 as uuidv4 } from 'uuid';
 import cn from 'classnames';
 import { getClothes } from 'components/store/clothes/actionCreators/getClothes';
 import { useAppDispatch, useAppSelector } from 'components/store/types';
+import { Pagination } from 'components/pagination';
 import style from './shop.module.scss';
 
 const categories: string[] = ['Все', 'Пальто', 'Свитшоты', 'Футболки', 'Купальник'];
 
 export const Shop: React.FC = () => {
+  const [currentPage, setCurrentPage] = useState(1);
   const data = useAppSelector((state) => state.clothes.items);
-  const [activeFilter, setActiveFilter] = useState('Все');
-  const filtered = data.filter((el) => el.category.includes(activeFilter));
-
   const dispatch = useAppDispatch();
 
+  const [activeFilter, setActiveFilter] = useState('Все');
   useEffect(() => {
-    dispatch(getClothes());
-  }, []);
+    dispatch(getClothes({ page: currentPage }));
+  }, [currentPage]);
+  console.log(currentPage);
+  const filtered = data.filter((el) => el.category.includes(activeFilter));
+  const showСlothes = () => (filtered.length >= 8 ? 8 : filtered.length);
+
+  const handleChangePage = (page: number) => {
+    setCurrentPage(page);
+  };
 
   return (
     <div className={style.container}>
@@ -31,11 +38,12 @@ export const Shop: React.FC = () => {
           </Button>
         ))}
       </div>
-      <div className={style.displayed}>9 из 12 товаров</div>
+      <div className={style.displayed}> {showСlothes()} из ?? товаров</div>
+      {/* ??? */}
       <Clothes items={filtered} />
       <div className={style.pages}>
-        <Button className={style.pages_btn}>1</Button>
-        <Button className={style.pages_btn}>2</Button>
+        <Pagination onChangePage={handleChangePage} page={currentPage} />
+        {/* ??? */}
       </div>
     </div>
   );

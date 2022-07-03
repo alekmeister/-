@@ -4,6 +4,7 @@ import ClothingReducer from './clothes/slice';
 export const store = configureStore({
   reducer: {
     clothes: ClothingReducer,
+    basket: ClothingReducer,
   },
 });
 

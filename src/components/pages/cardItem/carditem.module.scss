@@ -2,7 +2,6 @@
 @import '../../../style/btn';
 @import '../../../style/general';
 
-
 .title {
   margin-top: 100px;
   margin-bottom: 100px;
@@ -64,11 +63,18 @@
   border: 2px solid $grey-blue;
   margin-right: 10px;
   font-size: 20px;
-  text-align: center
+  text-align: center;
+  outline: none;
 }
 
 .btn {
   @extend %btn;
+  &_disabled {
+    &:hover {
+      background-color: $grey-blue;
+      border-color: $grey-blue;
+    }
+  }
 }
 
 .connectedItems {
@@ -76,3 +82,21 @@
   margin-bottom: 70px;
   font-size: 40px;
 }
+
+.active {
+  &_Size {
+    background-color: $black;
+    color: $white;
+    &_Error {
+      color: red;
+    }
+  }
+  &_Color {
+    border-color: $black;
+    border-width: 1px;
+    &_Error {
+      color: red;
+    }
+  }
+}
+

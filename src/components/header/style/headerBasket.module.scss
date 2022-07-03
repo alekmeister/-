@@ -1,0 +1,22 @@
+@import "src/style/variables";
+
+.basket {
+  margin-left: 80px;
+
+}
+.img {
+  position: absolute;
+}
+.circle {
+  width: 17px;
+  height: 17px;
+  background-color: $grey;
+  border-radius: 50%;
+  position: relative;
+  top: 15px;
+  left: 12px;
+  text-align: center;
+  color: $white;
+  font-weight: bold;
+  font-size: 13px;
+}

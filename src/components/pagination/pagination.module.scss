@@ -1,0 +1,23 @@
+@import "src/style/btn";
+
+.wrapper {
+  display: flex;
+
+  justify-content: space-between;
+  list-style-type: none;
+}
+
+.link {
+  @extend %btn_black_white;
+  padding: 8px 13px;
+  width: 40px;
+  height: 40px;
+  border: 2px solid;
+}
+
+.active {
+  background-color: $black;
+  color: $white;
+  border-color: $black;
+}
+
