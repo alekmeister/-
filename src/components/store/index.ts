@@ -5,6 +5,7 @@ export const store = configureStore({
   reducer: {
     clothes: ClothingReducer,
     basket: ClothingReducer,
+    total: ClothingReducer,
   },
 });
 

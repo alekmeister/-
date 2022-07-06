@@ -1,12 +1,13 @@
-import { State, Clothes } from 'components/store/clothes/types';
+import { Clothes, State } from 'components/store/clothes/types';
 import { REQUEST_STATUS } from 'types/RequestStatuses';
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { SLICE_NAME } from 'components/store/clothes/constants';
-import { addToBasketServer, getBasket, getClothes, removeFromBasketServer } from 'components/store/clothes/actionCreators/getClothes';
+import { getBasket, getClothes } from 'components/store/clothes/actionCreators/getClothes';
 
 const getInitialState = (): State => ({
   items: [],
   basket: [],
+  total: 0,
   status: REQUEST_STATUS.PENDING,
 });
 
@@ -20,6 +21,9 @@ const slice = createSlice({
     },
     removeFromBasket(state, action: PayloadAction<Clothes>) {
       state.basket = state.basket.filter((el) => el.id !== action.payload.id);
+    },
+    updateTotalPrice(state, action: PayloadAction<number>) {
+      state.total = action.payload;
     },
   },
   extraReducers: (builder) => {
@@ -45,19 +49,8 @@ const slice = createSlice({
     builder.addCase(getBasket.rejected, (state) => {
       state.status = REQUEST_STATUS.ERROR;
     });
-
-    // builder.addCase(removeFromBasketServer.pending, (state) => {
-    //   state.status = REQUEST_STATUS.LOADING;
-    // });
-    // builder.addCase(removeFromBasketServer.fulfilled, (state, action) => {
-    //   state.basket = action.payload;
-    //   state.status = REQUEST_STATUS.SUCCESS;
-    // });
-    // builder.addCase(removeFromBasketServer.rejected, (state) => {
-    //   state.status = REQUEST_STATUS.ERROR;
-    // });
   },
 });
 
-export const { addInBasket, removeFromBasket } = slice.actions;
+export const { addInBasket, removeFromBasket, updateTotalPrice } = slice.actions;
 export default slice.reducer;

@@ -18,25 +18,18 @@ width: 46%;
 background-color: $ligth-grey;
     &_inner {
       padding-top: 50px;
-      position: relative;
-
+      display: block;
     }
     &_header1{
-      position: absolute;
-      right: 550px;
-      bottom: -20px;
+      //transform: translate(-500px);
     }
     &_header2{
-      position: relative;
       padding-left: 50px;
       padding-bottom: 50px;
       padding-top: 50px;
     }
     &_header3{
-      position: absolute;
-      right: 100px;
-      top: 250px
-
+      //transform: translate(390px, -580px);
     }
 
   }
@@ -81,14 +74,19 @@ background-color: $ligth-grey;
 .btn {
   @extend %btn;
 }
-
-
+a{
+  text-decoration: none
+}
+.button {
+  display: flex;
+  text-decoration: none;
+  justify-content: center;
+}
 .btn_2 {
   margin-top: 50px;
   @extend %btn_2;
-  position: relative;
-  left: 50%;
-  transform: translate(-50%, 0)
+
+
 }
 
 .important{

@@ -20,7 +20,7 @@ export const Shop: React.FC = () => {
   useEffect(() => {
     dispatch(getClothes({ page: currentPage }));
   }, [currentPage]);
-  console.log(currentPage);
+
   const filtered = data.filter((el) => el.category.includes(activeFilter));
   const showСlothes = () => (filtered.length >= 8 ? 8 : filtered.length);
 
@@ -38,12 +38,10 @@ export const Shop: React.FC = () => {
           </Button>
         ))}
       </div>
-      <div className={style.displayed}> {showСlothes()} из ?? товаров</div>
-      {/* ??? */}
+      <div className={style.displayed}> Показано {showСlothes()} товаров</div>
       <Clothes items={filtered} />
       <div className={style.pages}>
         <Pagination onChangePage={handleChangePage} page={currentPage} />
-        {/* ??? */}
       </div>
     </div>
   );

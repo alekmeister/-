@@ -7,6 +7,8 @@ import { Title } from 'components/title/Title';
 import style from 'components/pages/basket/components/main/basket.module.scss';
 import { useAppDispatch, useAppSelector } from 'components/store/types';
 import { getBasket } from 'components/store/clothes/actionCreators/getClothes';
+import { Link } from 'react-router-dom';
+import { updateTotalPrice } from 'components/store/clothes/slice';
 
 enum PROMO_TYPES {
   PERCENT = 'PERCENT',
@@ -40,11 +42,13 @@ const Basket: React.FC = () => {
   useEffect(() => {
     dispatch(getBasket());
   }, []);
-  let counter = 0;
+
+  const initValue = 0;
   const calculateTotal = dataBasket
     .map((el) => el.price * el.amount)
-    .map((i) => (counter += i))
-    .reverse()[0];
+    .reduce((acc, currentValue) => {
+      return acc + currentValue;
+    }, initValue);
 
   const total = (): number => {
     const validPromo = AVAILIABLE_PROMOCODES.find(({ name }) => name === promo);
@@ -63,6 +67,7 @@ const Basket: React.FC = () => {
     }
   };
 
+  dispatch(updateTotalPrice(total()));
   return (
     <div className={style.container}>
       <Title>Корзина</Title>
@@ -72,7 +77,9 @@ const Basket: React.FC = () => {
         <BasketPromo setPromo={setPromo} promo={promo} />
         <div className={style.total}>
           <BasketTotal total={total()} />
-          <button className={style.checkout}>Оформить заказ</button>
+          <Link to="ordering">
+            <button className={style.checkout}>Оформить заказ</button>
+          </Link>
         </div>
       </div>
     </div>

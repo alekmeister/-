@@ -10,11 +10,17 @@ import { Error } from 'components/pages/error';
 import { CardItem } from 'components/pages/cardItem/CardItem';
 import { Basket } from 'components/pages/basket/components/main/Basket';
 import { Ordering } from 'components/pages/ordering/components/main/Ordering';
+import ScrollToTop from 'hooks/ScrollToTop';
+import Sticky from 'react-sticky-el';
 
 const App = () => {
   return (
     <BrowserRouter>
-      <Header />
+      <ScrollToTop />
+      <Sticky>
+        <Header />
+      </Sticky>
+
       <main>
         <Routes>
           <Route path="/" element={<Main />} />
@@ -23,7 +29,7 @@ const App = () => {
           <Route path="contact" element={<Contacts />} />
           <Route path="store/:clotheId" element={<CardItem />} />
           <Route path="basket" element={<Basket />} />
-          <Route path="ordering" element={<Ordering />} />
+          <Route path="basket/ordering" element={<Ordering />} />
           <Route path="*" element={<Error />} />
         </Routes>
       </main>

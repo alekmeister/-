@@ -9,18 +9,20 @@ import { HeaderBasket } from 'components/header/HeaderBasket';
 
 const Header: React.FC = () => {
   return (
-    <div className={style.container}>
-      <header className={style.header}>
-        <HeaderLogo />
-        <HeaderNav />
-        <div className={style.phone}>
-          <HeaderPhoneLogo />
-          <HeaderPhoneNumber />
-        </div>
-        <Link to="basket">
-          <HeaderBasket />
-        </Link>
-      </header>
+    <div className={style.head}>
+      <div className={style.container}>
+        <header className={style.header}>
+          <HeaderLogo />
+          <HeaderNav />
+          <div className={style.phone}>
+            <HeaderPhoneLogo />
+            <HeaderPhoneNumber />
+          </div>
+          <Link to="basket">
+            <HeaderBasket />
+          </Link>
+        </header>
+      </div>
     </div>
   );
 };

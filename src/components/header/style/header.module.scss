@@ -1,14 +1,16 @@
 @import '../../../style/variables';
 @import '../../../style/general';
 
+.head {
+  background-color: $white;
+  height: 90px;
+}
 .header {
-  height: 100%;
-  width: 100%;
-  margin-bottom: 10px;
+  padding-top: 35px;
+
+
   display: flex;
   justify-content: space-between;
-  margin-top: 50px;
-
 }
 
 .phone{

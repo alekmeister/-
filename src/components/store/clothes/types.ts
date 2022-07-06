@@ -14,5 +14,6 @@ export interface Clothes {
 export interface State {
   items: Clothes[];
   basket: Clothes[];
+  total: number;
   status: REQUEST_STATUS;
 }

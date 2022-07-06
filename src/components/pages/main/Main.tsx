@@ -42,8 +42,8 @@ const Main: React.FC = () => {
             <div className={style.slider_right}>
               <div className={style.slider_right_inner}>
                 <img className={style.slider_right_header2} src={Header2} alt="header2" />
-                <img className={style.slider_right_header1} src={Header1} alt="header1" />
-                <img className={style.slider_right_header3} src={Header3} alt="header3" />
+                {/* <img className={style.slider_right_header1} src={Header1} alt="header1" /> */}
+                {/* <img className={style.slider_right_header3} src={Header3} alt="header3" /> */}
               </div>
             </div>
           </div>
@@ -57,7 +57,9 @@ const Main: React.FC = () => {
           </div>
         </section>
         <Link to="store">
-          <button className={style.btn_2}>Открыть магазин</button>
+          <div className={style.button}>
+            <button className={style.btn_2}>Открыть магазин</button>
+          </div>
         </Link>
         <section>
           <div className={style.important}>
