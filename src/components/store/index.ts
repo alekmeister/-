@@ -6,6 +6,7 @@ export const store = configureStore({
     clothes: ClothingReducer,
     basket: ClothingReducer,
     total: ClothingReducer,
+    orders: ClothingReducer,
   },
 });
 

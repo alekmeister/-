@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { forwardRef, useRef } from 'react';
 import style from 'components/pages/ordering/components/main/ordering.module.scss';
-import { ErrorMessage, Field, Form, Formik } from 'formik';
+import { ErrorMessage, Field, Form, Formik, FormikProps, useFormikContext } from 'formik';
 import * as Yup from 'yup';
 import { v4 as uuidv4 } from 'uuid';
 
@@ -16,10 +16,11 @@ const Info: clientInformation[] = [
 ];
 type initValue = { name: string; phone: string; email: string; message: string };
 
-// type Props = React.Dispatch<React.SetStateAction<initValue>>;
-// type Props = () => void
+interface Props {
+  handleSubmitData: (data: initValue) => void;
+}
 
-export const BuyerInfo: React.FC = ({ data }) => {
+export const BuyerInfo = forwardRef<FormikProps<initValue>, Props>(({ handleSubmitData }, ref) => {
   return (
     <div className={style.inner}>
       <div className={style.title}> Данные покупателя </div>
@@ -35,9 +36,9 @@ export const BuyerInfo: React.FC = ({ data }) => {
           email: Yup.string().email('Неправильный email').required('Обязательное поле'),
           phone: Yup.string().matches(validPhone, 'Неверный номер').required('Обязательное поле'),
         })}
+        innerRef={ref}
         onSubmit={(values) => {
-          data(values);
-          console.log(values);
+          handleSubmitData(values);
         }}
       >
         <Form className={style.inner}>
@@ -47,9 +48,8 @@ export const BuyerInfo: React.FC = ({ data }) => {
               <ErrorMessage className={style.valid} name={el.name} component="div" key={uuidv4()} />
             </>
           ))}
-          <button type="button">1</button>
         </Form>
       </Formik>
     </div>
   );
-};
+});

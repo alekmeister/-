@@ -8,6 +8,7 @@ const getInitialState = (): State => ({
   items: [],
   basket: [],
   total: 0,
+  orders: [],
   status: REQUEST_STATUS.PENDING,
 });
 
@@ -15,9 +16,8 @@ const slice = createSlice({
   name: SLICE_NAME,
   initialState: getInitialState(),
   reducers: {
-    addInBasket(state, action: PayloadAction<Clothes>) {
-      // @ts-ignore
-      state.basket.push({ action });
+    addInBasket(state, { payload }: PayloadAction<Clothes>) {
+      state.basket.push(payload);
     },
     removeFromBasket(state, action: PayloadAction<Clothes>) {
       state.basket = state.basket.filter((el) => el.id !== action.payload.id);

@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import style from 'components/pages/ordering/components/main/ordering.module.scss';
-import { ErrorMessage, Field, Form, Formik } from 'formik';
+import { ErrorMessage, Field, Form, Formik, FormikProps } from 'formik';
 import * as Yup from 'yup';
 import { v4 as uuidv4 } from 'uuid';
 
@@ -13,7 +13,12 @@ const address: clientAddress[] = [
   { name: 'apartment', placeholder: 'Квартира' },
 ];
 
-export const BuyerAddress: React.FC = ({ data }) => {
+type initValue = { country: string; city: string; street: string; house: string; apartment: string };
+interface Props {
+  handleSubmitAddress: (data: initValue) => void;
+}
+
+export const BuyerAddress = forwardRef<FormikProps<initValue>, Props>(({ handleSubmitAddress }, ref) => {
   return (
     <div className={style.inner}>
       <div className={style.title}> Адрес получателя </div>
@@ -32,8 +37,9 @@ export const BuyerAddress: React.FC = ({ data }) => {
           house: Yup.string().min(2, 'Минимум 2 символа').required('Обязательное поле'),
           apartment: Yup.string().min(2, 'Минимум 2 символа').required('Обязательное поле'),
         })}
+        innerRef={ref}
         onSubmit={(values) => {
-          data(values);
+          handleSubmitAddress(values);
         }}
       >
         <Form className={style.inner}>
@@ -47,4 +53,4 @@ export const BuyerAddress: React.FC = ({ data }) => {
       </Formik>
     </div>
   );
-};
+});

@@ -1,9 +1,14 @@
 import React from 'react';
 import style from 'components/pages/ordering/components/orderInfo/orderInfo.module.scss';
 import { BasketTotal } from 'components/pages/basket/components/total/BasketTotal';
-import { useAppSelector } from 'components/store/types';
+import { Clothes } from 'components/store/clothes/types';
 
-export const OrderInfo: React.FC = ({ dataBasket, dataTotal }) => {
+interface Props {
+  dataBasket: Clothes[];
+  dataTotal: number;
+}
+
+export const OrderInfo: React.FC<Props> = ({ dataBasket, dataTotal }) => {
   return (
     <div className={style.inner}>
       <div className={style.title}> Ваш заказ </div>

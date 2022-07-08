@@ -22,7 +22,7 @@ export const Shop: React.FC = () => {
   }, [currentPage]);
 
   const filtered = data.filter((el) => el.category.includes(activeFilter));
-  const showСlothes = () => (filtered.length >= 8 ? 8 : filtered.length);
+  const showClothes = () => (filtered.length >= 8 ? 8 : filtered.length);
 
   const handleChangePage = (page: number) => {
     setCurrentPage(page);
@@ -38,7 +38,7 @@ export const Shop: React.FC = () => {
           </Button>
         ))}
       </div>
-      <div className={style.displayed}> Показано {showСlothes()} товаров</div>
+      <div className={style.displayed}> Показано {showClothes()} товаров</div>
       <Clothes items={filtered} />
       <div className={style.pages}>
         <Pagination onChangePage={handleChangePage} page={currentPage} />

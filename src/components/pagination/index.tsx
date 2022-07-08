@@ -3,10 +3,10 @@ import ReactPaginate from 'react-paginate';
 import style from './pagination.module.scss';
 
 type Props = {
-  currentPage: number;
+  page: number;
   onChangePage: (page: number) => void;
 };
-export const Pagination: React.FC<Props> = ({ onChangePage, currentPage }) => {
+export const Pagination: React.FC<Props> = ({ onChangePage, page }) => {
   return (
     <ReactPaginate
       className={style.pagination}
@@ -23,7 +23,7 @@ export const Pagination: React.FC<Props> = ({ onChangePage, currentPage }) => {
       onPageChange={(event) => onChangePage(event.selected + 1)}
       pageCount={3}
       previousLabel="<"
-      initialPage={currentPage}
+      initialPage={page}
     />
   );
 };

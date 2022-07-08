@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import style from 'components/pages/ordering/components/orderPayment/orderPayment.module.scss';
 import { v4 as uuidv4 } from 'uuid';
 
@@ -17,11 +17,15 @@ const paymentMethodAll = [
   },
 ];
 
-export const OrderPayment: React.FC = ({ setpaymentMethod, paymentMethod }) => {
+interface Props {
+  setPaymentMethod: (arg: string) => void;
+  paymentMethod: string;
+}
+
+export const OrderPayment: React.FC<Props> = ({ setPaymentMethod, paymentMethod }) => {
   const handleOnChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setpaymentMethod(e.target.name);
+    setPaymentMethod(e.target.name);
   };
-  // useEffect(() => setPayment(paymentMethod), [paymentMethod]);
 
   return (
     <div className={style.inner}>

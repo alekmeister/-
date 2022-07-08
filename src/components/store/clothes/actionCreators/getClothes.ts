@@ -14,13 +14,6 @@ export const getClothes = createAsyncThunk<Clothes[], Page>(`${SLICE_NAME}/fetch
   }
 });
 
-// export const getOneItem = createAsyncThunk<Clothes, void>(`${SLICE_NAME}/fetchClothing`, async ({ id }: any) => {
-//   try {
-//     const response = await axios.get(`https://62b0b45e196a9e9870296581.mockapi.io/items/${id}`);
-//     return response.data;
-//   } catch (e) {
-//     throw new Error('Ошибка загрузки одежды');
-//   }
 // });
 
 export const getBasket = createAsyncThunk<Clothes[], void>(`basket/fetchBasket`, async () => {
@@ -48,5 +41,14 @@ export const removeFromBasketServer = createAsyncThunk<string, string>(`basket/r
     return response.data;
   } catch (e) {
     throw new Error('Ошибка добавления в корзину');
+  }
+});
+
+export const createOrder = createAsyncThunk<string, any>(`orders/createOrder`, async (order) => {
+  try {
+    const response = await axios.post('https://62b0b45e196a9e9870296581.mockapi.io/orders/', { order });
+    return response.data;
+  } catch (e) {
+    throw new Error('Ошибка отправки заказа');
   }
 });
