@@ -1,4 +1,5 @@
 {
+  "homepage": "https://alekmeister.github.io/WOMAZING/",
   "name": "tretyakovka",
   "version": "0.1.0",
   "private": true,
@@ -38,6 +39,8 @@
   },
   "scripts": {
     "start": "concurrently \"react-scripts start\" \"npx json-server items.json --port 3001\"",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "lint": "eslint --ext .ts,.tsx src --fix",
     "test": "react-scripts test",
@@ -82,6 +85,7 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.30.0",
     "eslint-plugin-react-hooks": "^4.5.0",
+    "gh-pages": "^4.0.0",
     "prettier": "2.6.2"
   }
 }

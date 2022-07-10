@@ -1,0 +1,166 @@
+{
+  "items": [
+    {
+      "id": "0",
+      "category": [
+        "Футболки",
+        "Все"
+      ],
+      "name": "Футболка USA",
+      "price": "129$",
+      "size": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "color": [
+        "brown",
+        "grey",
+        "pink",
+        "orange"
+      ]
+    },
+    {
+      "id": "1",
+      "category": [
+        "Купальник",
+        "Все"
+      ],
+      "name": "Купальник 1",
+      "price": "130$",
+      "size": [
+        "S",
+        "M"
+      ],
+      "color": [
+        "pink",
+        "orange"
+      ]
+    },
+    {
+      "id": "2",
+      "category": [
+        "Свитшоты",
+        "Все"
+      ],
+      "name": "Свитшот 2",
+      "price": "150$",
+      "size": [
+        "S",
+        "L",
+        "XL"
+      ],
+      "color": [
+        "brown",
+        "grey",
+        "orange"
+      ]
+    },{
+      "id": "3",
+      "category": [
+        "Футболки",
+        "Все"
+      ],
+      "name": "Футболка USA",
+      "price": "129$",
+      "size": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "color": [
+        "brown",
+        "grey",
+        "pink",
+        "orange"
+      ]
+    },
+    {
+      "id": "4",
+      "category": [
+        "Купальник",
+        "Все"
+      ],
+      "name": "Купальник 1",
+      "price": "130$",
+      "size": [
+        "S",
+        "M"
+      ],
+      "color": [
+        "pink",
+        "orange"
+      ]
+    },
+    {
+      "id": "5",
+      "category": [
+        "Свитшоты",
+        "Все"
+      ],
+      "name": "Свитшот 2",
+      "price": "150$",
+      "size": [
+        "S",
+        "L",
+        "XL"
+      ],
+      "color": [
+        "brown",
+        "grey",
+        "orange"
+      ]
+    },{
+      "id": "6",
+      "category": [
+        "Купальник",
+        "Все"
+      ],
+      "name": "Купальник 1",
+      "price": "130$",
+      "size": [
+        "S",
+        "M"
+      ],
+      "color": [
+        "pink",
+        "orange"
+      ]
+    },{
+      "id": "7",
+      "category": [
+        "Купальник",
+        "Все"
+      ],
+      "name": "Купальник 1",
+      "price": "130$",
+      "size": [
+        "S",
+        "M"
+      ],
+      "color": [
+        "pink",
+        "orange"
+      ]
+    },{
+      "id": "8",
+      "category": [
+        "Купальник",
+        "Все"
+      ],
+      "name": "Купальник 1",
+      "price": "130$",
+      "size": [
+        "S",
+        "M"
+      ],
+      "color": [
+        "pink",
+        "orange"
+      ]
+    }
+  ]
+}
+
