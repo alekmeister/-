@@ -35,7 +35,7 @@ export const BuyerAddress = forwardRef<FormikProps<initValue>, Props>(({ handleS
           city: Yup.string().min(2, 'Минимум 2 символа').required('Обязательное поле'),
           street: Yup.string().min(2, 'Минимум 2 символа').required('Обязательное поле'),
           house: Yup.string().min(2, 'Минимум 2 символа').required('Обязательное поле'),
-          apartment: Yup.string().min(2, 'Минимум 2 символа').required('Обязательное поле'),
+          apartment: Yup.string().min(1, 'Минимум 1 символ').required('Обязательное поле'),
         })}
         innerRef={ref}
         onSubmit={(values) => {
@@ -44,10 +44,10 @@ export const BuyerAddress = forwardRef<FormikProps<initValue>, Props>(({ handleS
       >
         <Form className={style.inner}>
           {address.map((el) => (
-            <>
+            <div className={style.field} key={uuidv4()}>
               <Field className={style.input} placeholder={el.placeholder} name={el.name} key={uuidv4()} />
               <ErrorMessage className={style.valid} name={el.name} component="div" key={uuidv4()} />
-            </>
+            </div>
           ))}
         </Form>
       </Formik>

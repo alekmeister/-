@@ -3,7 +3,7 @@ import Main from 'components/pages/main/Main';
 import { Shop } from 'components/pages/shop/Shop';
 import { Contacts } from 'components/pages/contacts/Contacts';
 import './app.scss';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes, useLocation } from 'react-router-dom';
 import { Header } from 'components/header/Header';
 import { Footer } from 'components/footer/Footer';
 import { Error } from 'components/pages/error';
@@ -12,6 +12,7 @@ import { Basket } from 'components/pages/basket/components/main/Basket';
 import { Ordering } from 'components/pages/ordering/components/main/Ordering';
 import ScrollToTop from 'hooks/ScrollToTop';
 import Sticky from 'react-sticky-el';
+import { OrderReceived } from 'components/pages/orderReceived/OrderReceived';
 
 const App = () => {
   return (
@@ -25,11 +26,11 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Main />} />
           <Route path="store" element={<Shop />} />
-          <Route path="*" element={<Error />} />
           <Route path="contact" element={<Contacts />} />
           <Route path="store/:clotheId" element={<CardItem />} />
           <Route path="basket" element={<Basket />} />
           <Route path="basket/ordering" element={<Ordering />} />
+          <Route path="success" element={<OrderReceived />} />
           <Route path="*" element={<Error />} />
         </Routes>
       </main>

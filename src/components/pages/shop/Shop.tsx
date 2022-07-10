@@ -12,7 +12,7 @@ import style from './shop.module.scss';
 const categories: string[] = ['Все', 'Пальто', 'Свитшоты', 'Футболки', 'Купальник'];
 
 export const Shop: React.FC = () => {
-  const [currentPage, setCurrentPage] = useState(1);
+  const [currentPage, setCurrentPage] = useState(0);
   const data = useAppSelector((state) => state.clothes.items);
   const dispatch = useAppDispatch();
 

@@ -6,6 +6,7 @@ import { Clothes } from 'components/store/clothes/types';
 import { removeFromBasketServer } from 'components/store/clothes/actionCreators/getClothes';
 import { removeFromBasket } from 'components/store/clothes/slice';
 import React from 'react';
+import { v4 } from 'uuid';
 
 interface Props {
   data: Clothes[];
@@ -20,7 +21,7 @@ export const BasketItem: React.FC<Props> = ({ data }) => {
   return (
     <>
       {data.map((el) => (
-        <div className={style.item}>
+        <div className={style.item} key={v4()}>
           <div className={style.titleAndPhoto}>
             <Close className={style.close} onClick={() => remove(el)} />
             <img className={style.icon} src={tShirt} alt={tShirt} />

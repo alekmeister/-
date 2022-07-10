@@ -7,8 +7,11 @@ import { OrderInfo } from 'components/pages/ordering/components/orderInfo/OrderI
 import { OrderPayment } from 'components/pages/ordering/components/orderPayment/OrderPayment';
 import { useAppDispatch, useAppSelector } from 'components/store/types';
 import { FormikProps } from 'formik/dist/types';
-import { Clothes, FullOrder } from 'components/store/clothes/types';
-import { createOrder } from 'components/store/clothes/actionCreators/getClothes';
+import { createOrder, removeFromBasketServer } from 'components/store/clothes/actionCreators/getClothes';
+import { useNavigate } from 'react-router-dom';
+import { Clothes } from 'components/store/clothes/types';
+import { removeFromBasket } from 'components/store/clothes/slice';
+import { PAYMENTS_TYPE } from 'types/payments';
 
 interface FormData {
   name: string;
@@ -23,21 +26,38 @@ interface FormAddress {
   house: string;
   apartment: string;
 }
+interface newOrder {
+  Data: FormData;
+  Address: FormAddress;
+  Items: Clothes[];
+  Total: number;
+  PaymentMethod: string;
+}
 
 export const Ordering = () => {
-  const [buyerData, setBuyerData] = useState({});
-  const [buyerAddress, setBuyerAddress] = useState({});
+  const [buyerData, setBuyerData] = useState({ name: '', phone: '', email: '', message: '' });
+  const [buyerAddress, setBuyerAddress] = useState({ country: '', street: '', apartment: '', city: '', house: '' });
   const refData = useRef<FormikProps<FormData>>(null);
   const refAddress = useRef<FormikProps<FormAddress>>(null);
-  const [paymentMethod, setPaymentMethod] = useState('card');
+  const [paymentMethod, setPaymentMethod] = useState(PAYMENTS_TYPE.CARD);
   const dispatch = useAppDispatch();
+  const history = useNavigate();
   const dataTotal = useAppSelector((state) => state.total.total);
   const dataBasket = useAppSelector((state) => state.basket.basket);
-  const order = {
-    Data: {},
-    Address: {},
+  const remove = (el: Clothes) => {
+    dispatch(removeFromBasketServer(el.id));
+    dispatch(removeFromBasket(el));
+  };
+  const order: newOrder = {
+    Data: {
+      name: '',
+      phone: '',
+      email: '',
+      message: '',
+    },
+    Address: { country: '', street: '', apartment: '', city: '', house: '' },
     Items: [],
-    Total: '',
+    Total: 0,
     PaymentMethod: '',
   };
   const handleSubmitData = (entity: FormData) => {
@@ -48,17 +68,22 @@ export const Ordering = () => {
   };
   console.log(buyerData);
   console.log(buyerAddress);
-
   const confirmChanges = () => {
     refAddress?.current?.handleSubmit();
     refData?.current?.handleSubmit();
-    if (Object.keys(buyerData).length !== 0 && Object.keys(buyerAddress).length !== 0) {
+    if (Object.keys(buyerData.name).length !== 0 && Object.keys(buyerAddress.country).length !== 0) {
       order.Data = buyerData;
       order.Address = buyerAddress;
       order.Items = dataBasket;
       order.Total = dataTotal;
       order.PaymentMethod = paymentMethod;
-      dispatch(createOrder(order));
+      try {
+        dispatch(createOrder(order));
+        dataBasket.map((el) => remove(el));
+        history('/success');
+      } catch (err) {
+        history('*');
+      }
     }
   };
   return (

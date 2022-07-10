@@ -2,6 +2,7 @@ import { createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 import { SLICE_NAME } from 'components/store/clothes/constants';
 import { Clothes } from 'components/store/clothes/types';
+import { Navigate } from 'react-router-dom';
 
 type Page = { page: number };
 
@@ -37,7 +38,7 @@ export const addToBasketServer = createAsyncThunk<string, Clothes>(`basket/addTo
 export const removeFromBasketServer = createAsyncThunk<string, string>(`basket/removeFromBasket`, async (id) => {
   try {
     const response = await axios.delete(`https://62b0b45e196a9e9870296581.mockapi.io/basket/${id}`);
-    console.log(response.data);
+
     return response.data;
   } catch (e) {
     throw new Error('Ошибка добавления в корзину');
@@ -46,7 +47,7 @@ export const removeFromBasketServer = createAsyncThunk<string, string>(`basket/r
 
 export const createOrder = createAsyncThunk<string, any>(`orders/createOrder`, async (order) => {
   try {
-    const response = await axios.post('https://62b0b45e196a9e9870296581.mockapi.io/orders/', { order });
+    const response = await axios.post('https://62b0b45e196a9e9870296581.mockapi.io/orders/', { ...order });
     return response.data;
   } catch (e) {
     throw new Error('Ошибка отправки заказа');

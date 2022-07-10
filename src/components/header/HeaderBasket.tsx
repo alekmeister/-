@@ -6,6 +6,7 @@ import style from './style/headerBasket.module.scss';
 export const HeaderBasket = () => {
   const dataBasket = useAppSelector((state) => state.basket.basket);
   const amountClothes = dataBasket.length;
+
   return (
     <div className={style.basket}>
       <img className={style.img} src={basket} alt={basket} />

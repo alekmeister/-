@@ -9,7 +9,6 @@ export const BasketPromo: React.FC<any> = ({ setPromo }) => {
       <button className={style.usePromo} onClick={() => setPromo(userPromo)}>
         Применить{' '}
       </button>
-      <button className={style.updateBasket}>Обновить корзину</button>
     </div>
   );
 };

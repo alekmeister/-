@@ -43,10 +43,10 @@ export const BuyerInfo = forwardRef<FormikProps<initValue>, Props>(({ handleSubm
       >
         <Form className={style.inner}>
           {Info.map((el) => (
-            <>
+            <div className={style.field} key={uuidv4()}>
               <Field className={style.input} placeholder={el.placeholder} name={el.name} key={uuidv4()} />
               <ErrorMessage className={style.valid} name={el.name} component="div" key={uuidv4()} />
-            </>
+            </div>
           ))}
         </Form>
       </Formik>

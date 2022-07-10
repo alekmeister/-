@@ -9,6 +9,7 @@ import { useAppDispatch, useAppSelector } from 'components/store/types';
 import { getBasket } from 'components/store/clothes/actionCreators/getClothes';
 import { Link } from 'react-router-dom';
 import { updateTotalPrice } from 'components/store/clothes/slice';
+import { v4 } from 'uuid';
 
 enum PROMO_TYPES {
   PERCENT = 'PERCENT',
@@ -39,18 +40,17 @@ const Basket: React.FC = () => {
 
   const dataBasket = useAppSelector((state) => state.basket.basket);
   const dispatch = useAppDispatch();
+
   useEffect(() => {
     dispatch(getBasket());
   }, []);
 
-  const initValue = 0;
-  const calculateTotal = dataBasket
-    .map((el) => el.price * el.amount)
-    .reduce((acc, currentValue) => {
-      return acc + currentValue;
-    }, initValue);
-
   const total = (): number => {
+    const calculateTotal = dataBasket
+      .map((el) => el.price * el.amount)
+      .reduce((acc, currentValue) => {
+        return acc + currentValue;
+      }, 0);
     const validPromo = AVAILIABLE_PROMOCODES.find(({ name }) => name === promo);
     if (validPromo) {
       switch (validPromo.type) {
@@ -67,7 +67,12 @@ const Basket: React.FC = () => {
     }
   };
 
-  dispatch(updateTotalPrice(total()));
+  const priceWithPromo = total();
+
+  useEffect(() => {
+    dispatch(updateTotalPrice(priceWithPromo));
+  }, [priceWithPromo]);
+
   return (
     <div className={style.container}>
       <Title>Корзина</Title>
@@ -76,7 +81,7 @@ const Basket: React.FC = () => {
         <BasketItem data={dataBasket} />
         <BasketPromo setPromo={setPromo} promo={promo} />
         <div className={style.total}>
-          <BasketTotal total={total()} />
+          <BasketTotal total={priceWithPromo} />
           <Link to="ordering">
             <button className={style.checkout}>Оформить заказ</button>
           </Link>
