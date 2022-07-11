@@ -21,7 +21,7 @@ const CardItem: React.FC = () => {
   const dispatch = useAppDispatch();
 
   const item = data.find((el) => el.id === clotheId) as Clothes;
-  const { color, name, price, size, newPrice } = item;
+  const { color, name, price, size, newPrice, img } = item;
   const amount = (e: React.ChangeEvent<HTMLInputElement>) => {
     setAmountClothes(Number(e.target.value));
   };
@@ -42,7 +42,7 @@ const CardItem: React.FC = () => {
     <div className={style.container}>
       <Title>{name}</Title>
       <div className={style.item}>
-        <img className={style.photo} src={sweetshot} alt={sweetshot} />
+        <img className={style.photo} src={img} alt={name} />
         <div className={style.options}>
           <div className={style.price}>{newPrice || price}$</div>
           <div className={cn(style.size, { [style.active_Size_Error]: !activeSize })}>Выберите размер</div>

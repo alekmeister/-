@@ -1,166 +1,187 @@
-{
-  "items": [
-    {
-      "id": "0",
-      "category": [
-        "Футболки",
-        "Все"
-      ],
-      "name": "Футболка USA",
-      "price": "129$",
-      "size": [
-        "S",
-        "M",
-        "L",
-        "XL"
-      ],
-      "color": [
-        "brown",
-        "grey",
-        "pink",
-        "orange"
-      ]
-    },
-    {
-      "id": "1",
-      "category": [
-        "Купальник",
-        "Все"
-      ],
-      "name": "Купальник 1",
-      "price": "130$",
-      "size": [
-        "S",
-        "M"
-      ],
-      "color": [
-        "pink",
-        "orange"
-      ]
-    },
-    {
-      "id": "2",
-      "category": [
-        "Свитшоты",
-        "Все"
-      ],
-      "name": "Свитшот 2",
-      "price": "150$",
-      "size": [
-        "S",
-        "L",
-        "XL"
-      ],
-      "color": [
-        "brown",
-        "grey",
-        "orange"
-      ]
-    },{
-      "id": "3",
-      "category": [
-        "Футболки",
-        "Все"
-      ],
-      "name": "Футболка USA",
-      "price": "129$",
-      "size": [
-        "S",
-        "M",
-        "L",
-        "XL"
-      ],
-      "color": [
-        "brown",
-        "grey",
-        "pink",
-        "orange"
-      ]
-    },
-    {
-      "id": "4",
-      "category": [
-        "Купальник",
-        "Все"
-      ],
-      "name": "Купальник 1",
-      "price": "130$",
-      "size": [
-        "S",
-        "M"
-      ],
-      "color": [
-        "pink",
-        "orange"
-      ]
-    },
-    {
-      "id": "5",
-      "category": [
-        "Свитшоты",
-        "Все"
-      ],
-      "name": "Свитшот 2",
-      "price": "150$",
-      "size": [
-        "S",
-        "L",
-        "XL"
-      ],
-      "color": [
-        "brown",
-        "grey",
-        "orange"
-      ]
-    },{
-      "id": "6",
-      "category": [
-        "Купальник",
-        "Все"
-      ],
-      "name": "Купальник 1",
-      "price": "130$",
-      "size": [
-        "S",
-        "M"
-      ],
-      "color": [
-        "pink",
-        "orange"
-      ]
-    },{
-      "id": "7",
-      "category": [
-        "Купальник",
-        "Все"
-      ],
-      "name": "Купальник 1",
-      "price": "130$",
-      "size": [
-        "S",
-        "M"
-      ],
-      "color": [
-        "pink",
-        "orange"
-      ]
-    },{
-      "id": "8",
-      "category": [
-        "Купальник",
-        "Все"
-      ],
-      "name": "Купальник 1",
-      "price": "130$",
-      "size": [
-        "S",
-        "M"
-      ],
-      "color": [
-        "pink",
-        "orange"
-      ]
-    }
-  ]
-}
-
+[
+  {
+    "id": "1",
+    "category": [
+      "Футболки",
+      "Все"
+    ],
+    "img": "https://cdn.100sp.ru/pictures/690845967",
+    "name": "Футболка Pause and reset",
+    "price": "129",
+    "newPrice": "50",
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "color": [
+      "#FFC0CB",
+      "#4B0082",
+      "#FF0000",
+      "#FF4500"
+    ],
+    "amount": "1"
+  },
+  {
+    "id": "2",
+    "category": [
+      "Купальник",
+      "Все"
+    ],
+    "img": "https://www.vitoricci.ru/images/132215500844092001-0.jpg",
+    "name": "Черный купальник бикини",
+    "price": "130",
+    "size": [
+      "S",
+      "M"
+    ],
+    "color": [
+      "pink",
+      "orange"
+    ],
+    "amount": "1"
+  },
+  {
+    "id": "3",
+    "category": [
+      "Свитшоты",
+      "Все"
+    ],
+    "img": "https://static.staff-clothes.com/uploads/media/image_product/0001/84/8cda3529fb7a4fd7a418751a95146889.jpeg",
+    "name": "Свитшот Staff g brown overs",
+    "price": "150",
+    "newPrice": "70",
+    "size": [
+      "S",
+      "L",
+      "XL"
+    ],
+    "color": [
+      "brown",
+      "grey",
+      "orange"
+    ],
+    "amount": "1"
+  },
+  {
+    "id": "4",
+    "category": [
+      "Футболки",
+      "Все"
+    ],
+    "img": "https://cdn.crockid.ru/crockid/catalog/thumbs/0_fa9a5488-bcf9-11eb-a1e2-00155d006c00.jpg",
+    "name": "Футболка RsLine",
+    "price": "129",
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "color": [
+      "brown",
+      "grey",
+      "pink",
+      "orange"
+    ],
+    "amount": "1"
+  },
+  {
+    "id": "5",
+    "category": [
+      "Купальник",
+      "Все"
+    ],
+    "img": "https://cdn.crockid.ru/crockid/catalog/thumbs/0_fa9a5488-bcf9-11eb-a1e2-00155d006c00.jpg",
+    "name": "Купальник Croop",
+    "price": "130",
+    "size": [
+      "S",
+      "M"
+    ],
+    "color": [
+      "pink",
+      "orange"
+    ],
+    "amount": "1"
+  },
+  {
+    "id": "6",
+    "category": [
+      "Свитшоты",
+      "Все"
+    ],
+    "img": "https://static.staff-clothes.com/uploads/media/image_product/0001/84/8cda3529fb7a4fd7a418751a95146889.jpeg",
+    "name": "Свитшот StichK",
+    "price": "150",
+    "size": [
+      "S",
+      "L",
+      "XL"
+    ],
+    "color": [
+      "brown",
+      "grey",
+      "orange"
+    ],
+    "amount": "1"
+  },
+  {
+    "id": "7",
+    "category": [
+      "Пальто",
+      "Все"
+    ],
+    "img": "https://www.pompa.ru/upload/resize_cache/webp/iblock/80e/2000_2000_0/1012971p10006_i2.webp",
+    "name": "Пальто Military",
+    "price": "130",
+    "size": [
+      "S",
+      "M"
+    ],
+    "color": [
+      "pink",
+      "orange"
+    ],
+    "amount": "1"
+  },
+  {
+    "id": "8",
+    "category": [
+      "Пальто",
+      "Все"
+    ],
+    "img": "https://www.pompa.ru/upload/resize_cache/webp/iblock/80e/2000_2000_0/1012971p10006_i2.webp",
+    "name": "Пальто Vivaldi",
+    "price": "130",
+    "size": [
+      "S",
+      "M"
+    ],
+    "color": [
+      "pink",
+      "orange"
+    ],
+    "amount": "1"
+  },
+  {
+    "id": "9",
+    "category": [
+      "Пальто",
+      "Все"
+    ],
+    "img": "https://www.pompa.ru/upload/resize_cache/webp/iblock/80e/2000_2000_0/1012971p10006_i2.webp",
+    "name": "Пальто P-35",
+    "price": "130",
+    "size": [
+      "S",
+      "M"
+    ],
+    "color": [
+      "pink",
+      "orange"
+    ],
+    "amount": "1"
+  }
+]

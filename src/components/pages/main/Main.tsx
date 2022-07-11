@@ -1,8 +1,6 @@
 import React, { useEffect } from 'react';
 import style from 'components/pages/main/Main.module.scss';
-import Header1 from 'assets/Header1.jpg';
 import Header2 from 'assets/Header2.jpg';
-import Header3 from 'assets/Header3.jpg';
 import gear from 'assets/main.service/gear.svg';
 import hand from 'assets/main.service/hand.svg';
 import quality from 'assets/main.service/quality.svg';

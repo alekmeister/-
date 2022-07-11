@@ -2,6 +2,7 @@ import { REQUEST_STATUS } from 'types/RequestStatuses';
 
 export interface Clothes {
   category: string[];
+  img: string;
   color: string[];
   id: string;
   name: string;
