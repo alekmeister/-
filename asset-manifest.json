@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/WOMAZING/static/css/main.bf67ec5b.css",
+    "main.js": "/WOMAZING/static/js/main.884ad895.js",
+    "static/media/sliderDown.jpg": "/WOMAZING/static/media/sliderDown.8de1d4c564110a87ca47.jpg",
+    "static/media/Header2.jpg": "/WOMAZING/static/media/Header2.9a6fad5485b8efdcfd3d.jpg",
+    "static/media/tShirt.jpg": "/WOMAZING/static/media/tShirt.c06a7d48116834bc62db.jpg",
+    "index.html": "/WOMAZING/index.html",
+    "static/media/hand.svg": "/WOMAZING/static/media/hand.e1e30966b8484f1fe04ceecb122fc60e.svg",
+    "static/media/gear.svg": "/WOMAZING/static/media/gear.769ec304930e930dbab3eeebf2139371.svg",
+    "static/media/quality.svg": "/WOMAZING/static/media/quality.a21f3d080c0a69dd4b68faa4d64006cc.svg",
+    "static/media/twitter.svg": "/WOMAZING/static/media/twitter.bf8b37f7ad05a54b6f72627d6b3bfc0c.svg",
+    "static/media/checkmark.svg": "/WOMAZING/static/media/checkmark.190eeb87e003269fc77d545052d4d4a3.svg",
+    "static/media/logo.svg": "/WOMAZING/static/media/logo.0de906ad8ba0a144336e7832f6768782.svg",
+    "static/media/instagram.svg": "/WOMAZING/static/media/instagram.d2c3522b6737cc9bb36dd1346da9e73a.svg",
+    "static/media/phone.svg": "/WOMAZING/static/media/phone.3d0e1c997f574c228dc6b0ab40d6cfb6.svg",
+    "static/media/basket.svg": "/WOMAZING/static/media/basket.85c21c26ec31f25efcd0990a44665ad9.svg",
+    "static/media/facebook.svg": "/WOMAZING/static/media/facebook.4690bfb3a95f515be23a4090f0817932.svg",
+    "static/media/arrow.svg": "/WOMAZING/static/media/arrow.481ba5894f2c94cdd4419218dbfe3489.svg",
+    "static/media/close.svg": "/WOMAZING/static/media/close.c426867b3e3933a2efcf3ac25a21d32e.svg",
+    "main.bf67ec5b.css.map": "/WOMAZING/static/css/main.bf67ec5b.css.map",
+    "main.884ad895.js.map": "/WOMAZING/static/js/main.884ad895.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bf67ec5b.css",
+    "static/js/main.884ad895.js"
+  ]
+}
